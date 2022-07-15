@@ -1,8 +1,14 @@
 import React from 'react'
 
-function List() {
+function List({todos}) {
   return (
-    <div>List</div>
+    <div>
+      {
+        todos.map((todo, index) => {
+          return <div key={index}>{todo}</div>
+        })
+      }
+    </div>
   )
 }
 
