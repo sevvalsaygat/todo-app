@@ -5,9 +5,14 @@ import List from "./components/List";
 function App() {
   const [todos, setTodos] = useState([]);
 
+  console.log(todos);
+
   return (
     <div>
-      <Form />
+      <Form
+        todos={todos}
+        setTodos={setTodos}
+      />
       <List
         todos={todos}
       />
